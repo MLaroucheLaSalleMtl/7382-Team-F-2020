@@ -10,7 +10,9 @@ public class PlayerMove : MonoBehaviour
     [Range(0f, 0.5f)][SerializeField] private float smooting = 0.1f;
     private Rigidbody2D rigid;
     private Vector3 zeroVelocity = Vector3.zero;
- 
+    [SerializeField] private int hp = 10;
+    [SerializeField] public bool IsDeath = false;
+
 
 
     public void OnMove(InputAction.CallbackContext context)//移动控制
@@ -33,4 +35,16 @@ public class PlayerMove : MonoBehaviour
         rigid.velocity = Vector3.SmoothDamp(rigid.velocity, position, ref zeroVelocity, smooting);
         
     }
+
+    public void BeHit()
+    {
+       
+            hp -= 1;
+            if (hp <= 0)
+            {
+                IsDeath = true;
+                Destroy(this.gameObject);
+            }
+        }
+    
 }

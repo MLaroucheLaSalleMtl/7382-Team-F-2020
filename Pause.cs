@@ -7,7 +7,7 @@ public class Pause : MonoBehaviour
 {
 	public GameObject pause;
 	public bool isPaused = false;
-	public GameObject GameStartPanel;
+	//public GameObject GameStartPanel;
 
 	// Start is called before the first frame update
 	void Start()
@@ -61,7 +61,7 @@ public class Pause : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = true;
 		Time.timeScale = 0f;
-		GameStartPanel.SetActive(false);
+		//GameStartPanel.SetActive(false);
 		ResumeGame();
 	}
 }

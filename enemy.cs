@@ -2,10 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyType
+{
+    enemyBasic,
+    Boss
+}
+
+
 public class enemy : MonoBehaviour
 {
     [SerializeField] private int hp = 1;
     [SerializeField] private float speed = 2;
+    [SerializeField] private int goldscore=100;
+    [SerializeField] private EnemyType type = EnemyType.enemyBasic;
+    [SerializeField] public bool IsDeath = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +30,30 @@ public class enemy : MonoBehaviour
         if(this.transform.position.y<-5.6f)//当敌人超过-5.6时摧毁
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    public void Hit()
+    {
+      
+            hp -= 1;
+            if(hp<=0)
+            {
+                IsDeath = true;
+                Destroy(this.gameObject);
+            }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            if (!collision.GetComponent<PlayerMove>().IsDeath)
+            {
+                collision.gameObject.SendMessage("BeHit");
+                GameObject.Destroy(this.gameObject);//撞到玩家后飞机消失 
+            }
+
         }
     }
 }

@@ -12,7 +12,7 @@ public class bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 2f);    //创建子弹后,三秒后消除
+        Destroy(gameObject, 2f);    //创建子弹后,二秒后消除
     }
 
     // Update is called once per frame
@@ -28,17 +28,16 @@ public class bullet : MonoBehaviour
         }
     }
 
-     void OnCollisionEnter2D(Collision2D collision)
-     {
-        if(collision.gameObject.tag == "Enemy" && isPlayer)        
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag=="Enemy")
         {
-            collision.gameObject.GetComponent<Hurt>();
+            if (!collision.GetComponent<enemy>().IsDeath)
+            {
+              collision.gameObject.SendMessage("Hit");
+              GameObject.Destroy(this.gameObject);//撞到飞机后子弹消失 
+            }
+            
         }
-     }
-}
-
-internal class Hurt
-{
-    int damage = 1;
-    
+    }
 }
