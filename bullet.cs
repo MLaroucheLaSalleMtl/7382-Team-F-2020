@@ -12,20 +12,13 @@ public class bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 2f);    //创建子弹后,二秒后消除
+        Destroy(gameObject, 1.25f);    //创建子弹后,1.25秒后消除
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (isPlayer)//如果是玩家发射的子弹 
-        {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);//up
-        }
-        else
-        {
-            transform.Translate(Vector3.down * speed * Time.deltaTime); //down
-        }
+    {  
+            transform.Translate(Vector3.up * speed * Time.deltaTime);//up      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

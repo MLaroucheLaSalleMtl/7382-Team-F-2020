@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundTransform : MonoBehaviour
 {
-    public static float speed = 4f;
+    public static float speed = 2f;
 
 
     // Update is called once per frame

@@ -34,8 +34,7 @@ public class Skill : MonoBehaviour
     }
 
     public void OnClick()
-    {
-        
+    {       
         isStartTimer = true;
     }
 }
