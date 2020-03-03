@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 15
-  speed: 3
+  speed: 7
   goldscore: 300
   type: 0
   IsDeath: 0
