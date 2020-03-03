@@ -14,7 +14,7 @@ public class SpawnRight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CreateEnemyBasic2", Random.Range(5,10), enemyBasicRate2);
+        InvokeRepeating("CreateEnemyBasic2", 7, enemyBasicRate2);
     }
 
     // Update is called once per frame

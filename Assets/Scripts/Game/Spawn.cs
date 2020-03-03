@@ -57,14 +57,14 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         enemyBasicRate1 = GetComponent<GameManager>();
-        enemyBasicRate = GameManager.enemyBasicRate1;
+        //enemyBasicRate = GameManager.enemyBasicRate1;
         
-        InvokeRepeating("CreateEnemyBasic", 1,enemyBasicRate);
-        InvokeRepeating("CreateEnemyBasic2", 10, enemyBasicRate2);
-        InvokeRepeating("CreateStone", 30, StoneRate);
-        InvokeRepeating("CreateAward1", 40, AwardBulletRate);
-        InvokeRepeating("CreateAwardShield", 50, AwardShieldRate);
-        InvokeRepeating("CreateLaser", 20, LaserRate);
+        InvokeRepeating("CreateEnemyBasic", 1, enemyBasicRate);
+        InvokeRepeating("CreateEnemyBasic2", 6, enemyBasicRate2);
+        InvokeRepeating("CreateStone", 20, StoneRate);
+        InvokeRepeating("CreateAward1", 30, AwardBulletRate);
+        InvokeRepeating("CreateAwardShield", 30, AwardShieldRate);
+        InvokeRepeating("CreateLaser", 30, LaserRate);
         InvokeRepeating("IncreaseEnemyRate", 10, 10);
     }
     void IncreaseEnemyRate()

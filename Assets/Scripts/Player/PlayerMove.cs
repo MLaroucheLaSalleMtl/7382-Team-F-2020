@@ -53,20 +53,20 @@ public class PlayerMove : MonoBehaviour
         rigid.velocity = Vector3.SmoothDamp(rigid.velocity, position, ref zeroVelocity, smooting);
         ExtraGun -= Time.deltaTime;
 
-        //if (ExtraGun > 0)
-        //{
-        //    if (gunCount == 1)
-        //    {
-        //        transfromToExtraGun();
-        //    }
-        //}
-        //else
-        //{
-        //    if (gunCount == 2)
-        //    {
-        //        TransfromToNormalGun();
-        //    }
-        //}
+        if (ExtraGun > 0)
+        {
+            if (gunCount == 1)
+            {
+                transfromToExtraGun();
+            }
+        }
+        else
+        {
+            if (gunCount == 2)
+            {
+                TransfromToNormalGun();
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -94,26 +94,26 @@ public class PlayerMove : MonoBehaviour
 
     private void transfromToExtraGun()
     {
-        if(skill3Bullet.fillAmount > 0)
-        {
+        //if(skill3Bullet.fillAmount > 0)
+        //{
             gunCount = 2;
             gun1.stopFire();
             gun2.OnFire();
             gun3.OnFire();
-            skill3Bullet.fillAmount = 1;
-        }
+            //skill3Bullet.fillAmount = 1;
+       // }
     }
 
-    //public void TransfromToNormalGun()
-    //{
-    //    if (skill3Bullet.fillAmount <= 0.2f)
-    //    {
-    //        gunCount = 1;
-    //        gun2.stopFire();
-    //        gun3.stopFire();
-    //        gun1.OnFire();
-    //    }
-    //}
+    public void TransfromToNormalGun()
+    {
+        //if (skill3Bullet.fillAmount <= 0.2f)
+        //{
+            gunCount = 1;
+            gun2.stopFire();
+            gun3.stopFire();
+            gun1.OnFire();
+        //}
+    }
 
     public void BeHit()
     {      

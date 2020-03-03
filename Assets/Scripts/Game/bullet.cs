@@ -12,7 +12,7 @@ public class bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 1.25f);    //创建子弹后,1.25秒后消除
+        Destroy(gameObject, 1.20f);    //创建子弹后,1.25秒后消除
     }
 
     // Update is called once per frame
