@@ -13,18 +13,11 @@ public class PlayerMove : MonoBehaviour
     private Vector3 zeroVelocity = Vector3.zero;
     [SerializeField] private int hp = 10;
     [SerializeField] public bool IsDeath = false;
-    public float ExtraGun = 10;
-    //public float AllGun = 2;
-    private float ResetExtraGun;
-    private static int gunCount = 1;
-    public Gun gun1;
-    public Gun gun2;
-    public Gun gun3;
+    
     public GameObject deadpanel;
-    public GameObject shield;
+    
     private GameManager manager;
-    public Image skill3Bullet;
-    bool isSkill = false;
+   
 
 
 
@@ -38,10 +31,7 @@ public class PlayerMove : MonoBehaviour
     {
         manager = GameManager.instance;
         rigid = GetComponent<Rigidbody2D>();
-        ResetExtraGun = ExtraGun;
-        ExtraGun = 0;
-        gun1.OnFire();
-        shield.SetActive(false);       
+         
     }
 
     // Update is called once per frame
@@ -51,32 +41,7 @@ public class PlayerMove : MonoBehaviour
         position.x = move.x * speed;
         position.y = move.y * speed;
         rigid.velocity = Vector3.SmoothDamp(rigid.velocity, position, ref zeroVelocity, smooting);
-        ExtraGun -= Time.deltaTime;
-
-        if (ExtraGun > 0)
-        {
-            if (gunCount == 1)
-            {
-                transfromToExtraGun();
-            }
-        }
-        else
-        {
-            if (gunCount == 2)
-            {
-                TransfromToNormalGun();
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            speed = speed * 2;
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            transfromToExtraGun();
-        }
+        
 
     }
 
@@ -92,28 +57,7 @@ public class PlayerMove : MonoBehaviour
     //    }
     //}
 
-    private void transfromToExtraGun()
-    {
-        //if(skill3Bullet.fillAmount > 0)
-        //{
-            gunCount = 2;
-            gun1.stopFire();
-            gun2.OnFire();
-            gun3.OnFire();
-            //skill3Bullet.fillAmount = 1;
-       // }
-    }
-
-    public void TransfromToNormalGun()
-    {
-        //if (skill3Bullet.fillAmount <= 0.2f)
-        //{
-            gunCount = 1;
-            gun2.stopFire();
-            gun3.stopFire();
-            gun1.OnFire();
-        //}
-    }
+    
 
     public void BeHit()
     {      
@@ -127,26 +71,5 @@ public class PlayerMove : MonoBehaviour
             }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "SinBullet")
-        {
-            Award award = collision.GetComponent<Award>();
-            if (award.type == 0)
-            {
-                ExtraGun = ResetExtraGun;
-                Destroy(collision.gameObject);
-            }
-
-        }
-        if (collision.tag == "Shield")
-        {
-            Award award = collision.GetComponent<Award>();
-            if (award.type == 0)
-            {
-                shield.SetActive(true);
-                Destroy(collision.gameObject);
-            }
-        }
-    }
+   
 }
