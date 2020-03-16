@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2729795801624370347}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,9 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67127afe27fd3e54c9d2a8f8e1789ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 19
+  hp: 100
   speed: 1.5
-  enemyDamage: 10
   goldscore: 300
   type: 0
   IsDeath: 0

@@ -333,7 +333,7 @@
                     "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "SkillG",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -366,7 +366,7 @@
                     "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "SkillK",
                     "isComposite": false,
                     "isPartOfComposite": false

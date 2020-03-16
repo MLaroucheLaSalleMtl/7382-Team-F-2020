@@ -20,12 +20,17 @@ public class Gun : MonoBehaviour
     }
     public void OnFire()
     {
-        
-            InvokeRepeating("Fire", 1, speed);
+        InvokeRepeating("Fire", 1, speed);
     }
+
+    public void OnFireH()
+    {
+        InvokeRepeating("Fire", 1, 0.1f);
+    }
+
     public void stopFire()
     {
-            CancelInvoke("Fire");
+        CancelInvoke("Fire");
     }
 
     // Start is called before the first frame update
@@ -33,9 +38,6 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.H))
-        //{
-        //    InvokeRepeating("Fire", 10, speed);
-        //}
+        
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Shield
   - EnemyRight
   - laser
+  - Boss
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class PlayerSkill : MonoBehaviour
     public Gun gun2;
     public Gun gun3;
     public GameObject shield;
-    public Image skill3Bullet;
+    
     bool isSkill = false;
     // Start is called before the first frame update
     void Start()

@@ -301,10 +301,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 877303183}
   cooldownTime: 5
   timer: 0
   isStartTimer: 0
+  move: {fileID: 0}
+  gun1: {fileID: 790419391}
+  gun2: {fileID: 0}
+  gun3: {fileID: 0}
 --- !u!114 &97124406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,10 +1578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1222215150}
   cooldownTime: 8
   timer: 0
   isStartTimer: 0
+  move: {fileID: 0}
+  gun1: {fileID: 790419391}
+  gun2: {fileID: 1414392539}
+  gun3: {fileID: 1058610535}
 --- !u!114 &662538381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1934,7 +1940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &738225560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2429,10 +2435,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1912162081}
   cooldownTime: 6
   timer: 0
   isStartTimer: 0
+  move: {fileID: 1030448384}
+  gun1: {fileID: 0}
+  gun2: {fileID: 0}
+  gun3: {fileID: 0}
 --- !u!1001 &853004965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2658,7 +2667,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3747634162358465083}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3747634162358465084}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62adbcd2720696e4fb5efbad04b903cc, type: 3}
@@ -3851,10 +3860,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1783765391}
   cooldownTime: 10
   timer: 0
   isStartTimer: 0
+  move: {fileID: 0}
+  gun1: {fileID: 0}
+  gun2: {fileID: 0}
+  gun3: {fileID: 0}
 --- !u!114 &2114578869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4033,8 +4045,38 @@ PrefabInstance:
       propertyPath: skill3Bullet
       value: 
       objectReference: {fileID: 1222215150}
+    - target: {fileID: 3747634163145964120, guid: 7e35f5f3636af45469dacb3a8410082d,
+        type: 3}
+      propertyPath: speed
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e35f5f3636af45469dacb3a8410082d, type: 3}
+--- !u!1 &3747634162358465084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3747634161495111082, guid: 7e35f5f3636af45469dacb3a8410082d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3747634162358465083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3747634162358465085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747634162358465084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 8
+  timer: 0
+  isStartTimer: 0
+  move: {fileID: 1030448384}
+  gun1: {fileID: 790419391}
+  gun2: {fileID: 1414392539}
+  gun3: {fileID: 1058610535}
 --- !u!1001 &8262191596204734138
 PrefabInstance:
   m_ObjectHideFlags: 0
