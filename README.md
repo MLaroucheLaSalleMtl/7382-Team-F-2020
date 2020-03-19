@@ -13,6 +13,7 @@ Collect the red box to gain a shell. Also beware of the comet !
 
 •	Controls
   W, A, S, D OR Up, Down, Left, Right arrow to move
+![image](https://github.com/MLaroucheLaSalleMtl/7382-Team-F-2020/blob/master/111.jpg)
  
 •	Sources
 Keyboard picture: https://m.duitang.com/blog/?id=824022174&belong_album=86097583
