@@ -37,12 +37,17 @@ public class PlayerMove : MonoBehaviour
         rigid.velocity = Vector3.SmoothDamp(rigid.velocity, position, ref zeroVelocity, smooting);
     }  
 
+    public void ISDeath()
+    {
+        IsDeath = true;
+    }
+
     public void BeHit()
     {
         hp -= 1;
         if (hp <= 0)
         {
-            IsDeath = true;
+            ISDeath();
             Destroy(this.gameObject);
             Time.timeScale = 0f;
             deadpanel.SetActive(true);
