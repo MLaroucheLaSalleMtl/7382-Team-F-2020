@@ -10,7 +10,10 @@ public class Spawn : MonoBehaviour
     public GameObject AwardBullet;
     public GameObject AwardShield;
     public GameObject Laser;
+    public GameObject Boss1;
     public GameManager enemyBasicRate1;
+    public bool IsBoss = false;
+
 
     [SerializeField] private float enemyBasicRate = 0.5f;
     [SerializeField] private float enemyBasicRate2 = 1f;
@@ -47,6 +50,18 @@ public class Spawn : MonoBehaviour
         float x = Random.Range(-6.16f, 6.15f);
         GameObject.Instantiate(AwardShield, new Vector3(x, transform.position.y, 0), Quaternion.identity);
     }
+    public void CreateBoss1()
+    {
+        float x = -1.65f;
+        IsBoss = true;
+        GameObject.Instantiate(Boss1, new Vector3(x, transform.position.y, 0), Quaternion.identity);
+        if (IsBoss == true)
+        {
+            CancelInvoke("CreateEnemyBasic");
+            CancelInvoke("CreateEnemyBasic2");
+
+        }
+    }
 
     public void CreateLaser()
     {
@@ -66,6 +81,9 @@ public class Spawn : MonoBehaviour
         InvokeRepeating("CreateAwardShield", 30, AwardShieldRate);
         InvokeRepeating("CreateLaser", 30, LaserRate);
         InvokeRepeating("IncreaseEnemyRate", 10, 10);
+        Invoke("CreateBoss1", 90);
+       
+
     }
     void IncreaseEnemyRate()
     {

@@ -42,7 +42,7 @@ public class enemy : MonoBehaviour
         else if(gameObject.tag=="Boss")
         {
             float step = speed * Time.deltaTime;
-            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(1, 4, -5), step);
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(2, 7, -5), step);
         }
         
         if(this.transform.position.y<-5.6f)//当敌人超过-5.6时摧毁
@@ -61,6 +61,7 @@ public class enemy : MonoBehaviour
                 Destroy(this.gameObject);
                 GameManager.instance.score += goldscore;
             }
+            
         
     }
     private void OnTriggerEnter2D(Collider2D collision)

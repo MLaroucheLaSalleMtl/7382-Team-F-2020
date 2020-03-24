@@ -18,14 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/BeginFlowchart.unity
     guid: 1976332bede19d94198543887a3bb536
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Level 1.unity
     guid: cfaf126d010e4e94fa2039431296e068
   - enabled: 1
     path: Assets/Scenes/MiddleFlowchartone.unity
     guid: 1ab87f800a4e03048946d933d8a7f5cb
   - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: e40fe7e02fa29ea4bbac44a26c892894
+  - enabled: 1
     path: Assets/Scenes/MiddleFlowCharttwo.unity
     guid: 1814d61eca7323f44be0425a404de0a6
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: f82ac0d64139d5641bb4919a256e1bfb
   - enabled: 1
     path: Assets/Scenes/EndingFlowchart.unity
     guid: 14d4d3a98b396334eb9535dc9319b6dd

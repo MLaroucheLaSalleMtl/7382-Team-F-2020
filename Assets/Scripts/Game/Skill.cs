@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class Skill : MonoBehaviour
 {
-    private Image icon;
+    public Image iconG;
+    private Image iconH;
+    private Image iconJ;
+    public Image iconK;
+
     public float cooldownTime;
     public float cooldownTimeG;
     public float cooldownTimeH;
@@ -18,10 +22,10 @@ public class Skill : MonoBehaviour
     private float timerK = 0;
 
     private bool isStartTimer = false;
-    //private bool isStartTimerG = false;
-    //private bool isStartTimerH = false;
-    //private bool isStartTimerJ = false;
-    //public bool isStartTimerK = false;
+    private bool isStartTimerG = false;
+    private bool isStartTimerH = false;
+    private bool isStartTimerJ = false;
+    private bool isStartTimerK = false;
 
     public PlayerMove move;
     public GameObject shield;
@@ -45,124 +49,137 @@ public class Skill : MonoBehaviour
     void Start()
     {
         manager = GameManager.instance;
-        icon = transform.Find("Mask").GetComponent<Image>();
+        //iconG = transform.Find("MaskG").GetComponent<Image>();
+        //iconH = transform.Find("MaskH").GetComponent<Image>();
+        //icon = transform.Find("Mask").GetComponent<Image>();
 
         gun1.OnFire();
-        gun2.stopFire();
-        gun3.stopFire();
+        //gun2.stopFire();
+        //gun3.stopFire();
         //shield.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        SkillK();
         SkillG();
-        //SkillH();
+        SkillK();
     }
 
-    private void SkillK()
+    void FixedUpdate()
     {
-        if (isStartTimer == true)
-        {
-            timerK += Time.deltaTime;
-            icon.fillAmount = (cooldownTime - timerK) / cooldownTime;
-            if (Input.GetKeyDown(KeyCode.K) && isKSkill == false && isKLock == false)
-            {
-                isKLock = true;
-                isKSkill = true;
-                gun1.stopFire();
-                gun2.OnFire();
-                gun3.OnFire();
-            }
-        }
-        if (timerK >= cooldownTimeK)
-        {
-            if (isKSkill == true)
-            {
-                isKSkill = false;
-                gun1.OnFire();
-                gun2.stopFire();
-                gun3.stopFire();
-            }
-        }
-
-        if (timerK >= cooldownTime)
-        {
-            icon.fillAmount = 0;
-            timerK = 0;
-            isKLock = false;
-            isStartTimer = false;
-            isKSkill = false;
-        }
+        checkG();
+        checkK();
     }
 
     private void SkillG()
     {
-        if (isStartTimer == true)
+        if (Input.GetKey("g") && isGSkill == false && isGLock == false)
+        {            
+            isGLock = true;
+            isGSkill = true;
+            move.speed = 10;
+            isStartTimerG = true;
+        }
+    }
+    private void checkG()
+    {
+        if (isStartTimerG == true)
         {
             timerG += Time.deltaTime;
-            icon.fillAmount = (cooldownTime - timerG) / cooldownTime;
-            if (Input.GetKeyDown(KeyCode.G) && isGSkill == false && isGLock == false)
+            iconG.fillAmount = (cooldownTime - timerG) / cooldownTime;
+            if (timerG >= cooldownTimeG)
             {
-                isGLock = true;
-                isGSkill = true;
-                move.speed = move.speed * 2;
+                if (isGSkill == true)
+                {                   
+                    move.speed = 4;
+                    isGSkill = false;
+                }
             }
-        }
-        if (timerG >= cooldownTimeG)
-        {
-            if (isGSkill == true)
+            if (timerG >= cooldownTime)
             {
+                iconG.fillAmount = 0;
+                timerG = 0;
+                isGLock = false;
+                isStartTimerG = false;
                 isGSkill = false;
-                move.speed = move.speed / 2;
             }
-        }
-
-        if (timerG >= cooldownTime)
-        {
-            icon.fillAmount = 0;
-            timerG = 0;
-            isGLock = false;
-            isStartTimer = false;
-            isGSkill = false;
         }
     }
 
-    private void SkillH()
+    public void SkillK()
     {
-        if (isStartTimer == true)
+        if (Input.GetKey("k") && isKSkill == false && isKLock == false)
         {
-            timerH += Time.deltaTime;
-            icon.fillAmount = (cooldownTime - timerH) / cooldownTime;
-            if (Input.GetKeyDown(KeyCode.H) && isHSkill == false && isHLock == false)
-            {
-                isHLock = true;
-                isHSkill = true;
-                shield.SetActive(true);
-            }
-        }
-        if (timerH >= cooldownTimeH)
-        {
-            if (isHSkill == true)
-            {
-                isHSkill = false;
-                shield.SetActive(false);
-            }
-        }
-
-        if (timerH >= cooldownTime)
-        {
-            icon.fillAmount = 0;
-            timerH = 0;
-            isHLock = false;
-            isStartTimer = false;
-            isHSkill = false;
+            isKLock = true;
+            isKSkill = true;
+            gun1.stopFire();
+            gun2.OnFire();
+            gun3.OnFire();
+            isStartTimerK = true;
         }
     }
-
-    public void OnClick()
+    private void checkK()
     {
-        isStartTimer = true;
+        if (isStartTimerK == true)
+        {
+            timerK += Time.deltaTime;
+            iconK.fillAmount = (cooldownTime - timerK) / cooldownTime;
+            if (timerK >= cooldownTimeK)
+            {
+                if (isKSkill == true)
+                {
+                    isKSkill = false;
+                    gun1.OnFire();
+                    gun2.stopFire();
+                    gun3.stopFire();
+                }
+            }
+            if (timerK >= cooldownTime)
+            {
+                iconK.fillAmount = 0;
+                timerK = 0;
+                isKLock = false;
+                isStartTimerK = false;
+                isKSkill = false;
+            }
+        }
     }
+
+    //private void SkillH()
+    //{
+    //    if (isStartTimer == true)
+    //    {
+    //        timerH += Time.deltaTime;
+    //        iconH.fillAmount = (cooldownTime - timerH) / cooldownTime;
+    //        if (Input.GetKeyDown(KeyCode.H) && isHSkill == false && isHLock == false)
+    //        {
+    //            isHLock = true;
+    //            isHSkill = true;
+    //            shield.SetActive(true);
+    //        }
+    //    }
+    //    if (timerH >= cooldownTimeH)
+    //    {
+    //        if (isHSkill == true)
+    //        {
+    //            isHSkill = false;
+    //            shield.SetActive(false);
+    //        }
+    //    }
+
+    //    if (timerH >= cooldownTime)
+    //    {
+    //        iconH.fillAmount = 0;
+    //        timerH = 0;
+    //        isHLock = false;
+    //        isStartTimer = false;
+    //        isHSkill = false;
+    //    }
+    //}
+
+    //public void OnClick()
+    //{
+    //    isStartTimer = true;
+    //}
 }

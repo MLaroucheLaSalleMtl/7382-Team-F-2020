@@ -25,6 +25,7 @@ public class LoadScene : MonoBehaviour
 
 			asy = SceneManager.LoadSceneAsync(i);
 			asy.allowSceneActivation = true;
+			Time.timeScale = 1f;
 		}
 	}
 
@@ -35,6 +36,12 @@ public class LoadScene : MonoBehaviour
 		{
 			asy = SceneManager.LoadSceneAsync(s);
 			asy.allowSceneActivation = true;
+			Time.timeScale = 1f;
 		}
+	}
+
+	public void RestartScene()
+	{
+		SceneManager.LoadSceneAsync("Level 1");
 	}
 }

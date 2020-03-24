@@ -26,8 +26,8 @@ public class shotGunBullet : MonoBehaviour
     IEnumerator FirShotgun()
     {
         Vector3 bulletDir = Vector3.down; 
-        Quaternion leftRota = Quaternion.AngleAxis(-30, Vector3.forward);
-        Quaternion RightRota = Quaternion.AngleAxis(30, Vector3.forward); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转30度
+        Quaternion leftRota = Quaternion.AngleAxis(-45, Vector3.forward);
+        Quaternion RightRota = Quaternion.AngleAxis(45, Vector3.forward); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转30度
       while(CountTime<StopTime)
         {
             yield return new WaitForSeconds(3f);
