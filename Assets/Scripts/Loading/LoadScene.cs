@@ -39,9 +39,4 @@ public class LoadScene : MonoBehaviour
 			Time.timeScale = 1f;
 		}
 	}
-
-	public void RestartScene()
-	{
-		SceneManager.LoadSceneAsync("Level 1");
-	}
 }

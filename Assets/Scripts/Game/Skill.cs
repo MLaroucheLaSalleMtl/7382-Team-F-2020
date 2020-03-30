@@ -43,12 +43,12 @@ public class Skill : MonoBehaviour
     bool isHLock = false;
     bool isJLock = false;
 
-    private GameManager manager;
+    //private GameManager manager;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.manager = GameManager.instance;
+        //this.manager = GameManager.instance;
         //iconG = transform.Find("MaskG").GetComponent<Image>();
         //iconH = transform.Find("MaskH").GetComponent<Image>();
         //icon = transform.Find("Mask").GetComponent<Image>();
