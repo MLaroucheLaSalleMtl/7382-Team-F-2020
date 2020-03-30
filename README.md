@@ -8,7 +8,8 @@ Team Hongfei Liu, Boren Jiang and Jinlu Liu
 ![image](https://github.com/MLaroucheLaSalleMtl/7382-Team-F-2020/blob/master/Images/Manual_page-0005.jpg)
 ![image](https://github.com/MLaroucheLaSalleMtl/7382-Team-F-2020/blob/master/Images/Manual_page-0006.jpg)
 
-In order to save you time, we put all sources below: (Also, you can find a documentation called Manual.docx upward side of Readme.md)  
+In order to save you time, we put all sources below:  
+(Also, you can find a documentation called Manual.docx upward side of Readme.md)  
   Keyboard picture:  
     https://m.duitang.com/blog/?id=824022174&belong_album=86097583  
   Create a Space Shooter Game:  
