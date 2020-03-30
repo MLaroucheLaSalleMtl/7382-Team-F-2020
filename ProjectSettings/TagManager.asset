@@ -13,6 +13,7 @@ TagManager:
   - EnemyRight
   - laser
   - Boss
+  - SPCBullet
   layers:
   - Default
   - TransparentFX

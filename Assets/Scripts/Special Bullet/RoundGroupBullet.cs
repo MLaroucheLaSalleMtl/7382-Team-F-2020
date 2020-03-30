@@ -7,12 +7,18 @@ public class RoundGroupBullet : MonoBehaviour
     public BulletCharacter bulletTemplate;
     public Transform firPoint;
     public List<BulletCharacter> tempBullets;
+
+    public float CountTime = 1;
+    public float StopTime = 2;
+
     // Start is called before the first frame update
     void Start()
     {
         tempBullets = new List<BulletCharacter>();
+        CountTime *= Time.deltaTime;
+        StopTime += Time.deltaTime;
         StartCoroutine(FirRoundGroup());
-        Destroy(gameObject, 4f);
+        
     }
 
     IEnumerator FirRound(int number, Vector3 creatPoint)
@@ -32,23 +38,25 @@ public class RoundGroupBullet : MonoBehaviour
     }
 
 
-        IEnumerator FirRoundGroup()
+    IEnumerator FirRoundGroup()
         {
         Vector3 bulletDir = firPoint.transform.up;
         Quaternion rotateQuate = Quaternion.AngleAxis(45, Vector3.forward);//使用四元数制造绕Z轴旋转45度的旋转
         List<BulletCharacter> bullets = new List<BulletCharacter>();       //装入开始生成的8个弹幕
-        for (int i = 0; i < 8; i++)
-        {
-            var tempBullet = CreatBullet(bulletDir, firPoint.transform.position);
-            bulletDir = rotateQuate * bulletDir; //生成新的子弹后，让发射方向旋转45度，到达下一个发射方向
-            bullets.Add(tempBullet);
-        }
-        yield return new WaitForSeconds(1.0f);   //1秒后在生成多波弹幕
-        for (int i = 0; i < bullets.Count; i++)
-        {
-            bullets[i].speed = 0; //弹幕停止移动
-            StartCoroutine(FirRound(6, bullets[i].transform.position));//通过之前弹幕的位置，生成多波多方向的圆形弹幕
-        }
+            for (int i = 0; i < 8; i++)
+            {
+                var tempBullet = CreatBullet(bulletDir, firPoint.transform.position);
+                bulletDir = rotateQuate * bulletDir; //生成新的子弹后，让发射方向旋转45度，到达下一个发射方向
+                bullets.Add(tempBullet);
+            }
+            yield return new WaitForSeconds(1.0f);   //1秒后在生成多波弹幕
+            for (int i = 0; i < bullets.Count; i++)
+            {
+                bullets[i].speed = 0; //弹幕停止移动
+                StartCoroutine(FirRound(6, bullets[i].transform.position));//通过之前弹幕的位置，生成多波多方向的圆形弹幕
+            }
+        
+     
     }
 
     public BulletCharacter CreatBullet(Vector3 dir, Vector3 creatPoint)

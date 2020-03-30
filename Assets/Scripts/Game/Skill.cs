@@ -48,7 +48,7 @@ public class Skill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameManager.instance;
+        this.manager = GameManager.instance;
         //iconG = transform.Find("MaskG").GetComponent<Image>();
         //iconH = transform.Find("MaskH").GetComponent<Image>();
         //icon = transform.Find("Mask").GetComponent<Image>();
@@ -102,7 +102,7 @@ public class Skill : MonoBehaviour
                 timerG = 0;
                 isGLock = false;
                 isStartTimerG = false;
-                isGSkill = false;
+                //isGSkill = false;
             }
         }
     }
@@ -141,7 +141,7 @@ public class Skill : MonoBehaviour
                 timerK = 0;
                 isKLock = false;
                 isStartTimerK = false;
-                isKSkill = false;
+                //isKSkill = false;
             }
         }
     }

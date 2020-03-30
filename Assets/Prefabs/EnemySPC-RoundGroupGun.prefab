@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3468598814774481370}
-  - component: {fileID: 3468598814774481369}
   - component: {fileID: 6348284860556172213}
   m_Layer: 0
   m_Name: RoundGroupGun
@@ -32,20 +31,6 @@ Transform:
   m_Father: {fileID: 3468598814924429109}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3468598814774481369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3468598814774481371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee56ec71d8abbb4886f22e8ecd15cd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayer: 0
-  speed: 6
 --- !u!114 &6348284860556172213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +47,8 @@ MonoBehaviour:
     type: 3}
   firPoint: {fileID: 0}
   tempBullets: []
+  CountTime: 0
+  StopTime: 0
 --- !u!1 &3468598814924429096
 GameObject:
   m_ObjectHideFlags: 0
