@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 97124403}
   - component: {fileID: 97124407}
   - component: {fileID: 97124406}
-  - component: {fileID: 97124405}
   - component: {fileID: 97124404}
   m_Layer: 5
   m_Name: SkillH
@@ -278,28 +277,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &97124405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97124402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconG: {fileID: 0}
-  iconK: {fileID: 0}
-  skillStopTime: 0
-  cooldownTimeG: 10
-  cooldownTimeK: 0
-  move: {fileID: 1030448384}
-  shield: {fileID: 0}
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
 --- !u!114 &97124406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,10 +1451,8 @@ GameObject:
   - component: {fileID: 662538378}
   - component: {fileID: 662538382}
   - component: {fileID: 662538381}
-  - component: {fileID: 662538380}
   - component: {fileID: 662538379}
   - component: {fileID: 662538383}
-  - component: {fileID: 662538384}
   m_Layer: 5
   m_Name: SkilK
   m_TagString: Untagged
@@ -1549,28 +1524,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &662538380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662538377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconG: {fileID: 0}
-  iconK: {fileID: 1222215150}
-  skillStopTime: 4
-  cooldownTimeG: 0
-  cooldownTimeK: 8
-  move: {fileID: 1030448384}
-  shield: {fileID: 0}
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
 --- !u!114 &662538381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,23 +1567,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662538377}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d5cae37006d1014eb81e2bee0ad325b, type: 3}
+  m_Script: {fileID: 11500000, guid: bf0ed816fe869194994fd79b02e3b636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &662538384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662538377}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb5af1659ba69f41abadd8bc37ad0df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  gun1: {fileID: 790419391}
+  gun2: {fileID: 1414392539}
+  gun3: {fileID: 1552328325}
+  skillStopTime: 5
+  cooldownTimeK: 10
 --- !u!1 &688715496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,8 +2259,8 @@ GameObject:
   - component: {fileID: 851717115}
   - component: {fileID: 851717117}
   - component: {fileID: 851717116}
-  - component: {fileID: 851717119}
   - component: {fileID: 851717118}
+  - component: {fileID: 851717120}
   m_Layer: 5
   m_Name: SkillG
   m_TagString: Untagged
@@ -2422,7 +2368,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &851717119
+--- !u!114 &851717120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2431,19 +2377,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 851717114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
+  m_Script: {fileID: 11500000, guid: b26e60855263ce54683d7a6243857ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iconG: {fileID: 1912162081}
-  iconK: {fileID: 0}
-  skillStopTime: 5
-  cooldownTimeG: 10
-  cooldownTimeK: 0
   move: {fileID: 1030448384}
-  shield: {fileID: 0}
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
+  skillStopTime: 4
+  cooldownTimeG: 8
 --- !u!1001 &853004965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3859,7 +3798,6 @@ GameObject:
   - component: {fileID: 2114578866}
   - component: {fileID: 2114578870}
   - component: {fileID: 2114578869}
-  - component: {fileID: 2114578868}
   - component: {fileID: 2114578867}
   m_Layer: 5
   m_Name: SkillJ
@@ -3932,28 +3870,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2114578868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114578865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconG: {fileID: 0}
-  iconK: {fileID: 0}
-  skillStopTime: 0
-  cooldownTimeG: 10
-  cooldownTimeK: 4
-  move: {fileID: 1030448384}
-  shield: {fileID: 0}
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
 --- !u!114 &2114578869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4132,7 +4048,13 @@ PrefabInstance:
       propertyPath: cooldownTime
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3747634162358465085, guid: 7e35f5f3636af45469dacb3a8410082d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3747634162358465085, guid: 7e35f5f3636af45469dacb3a8410082d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e35f5f3636af45469dacb3a8410082d, type: 3}
 --- !u!1001 &8262191596204734138
 PrefabInstance:
@@ -4280,7 +4202,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 97124405}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -4295,7 +4217,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 2114578868}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -4385,7 +4307,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 97124405}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -4410,7 +4332,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2114578868}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
