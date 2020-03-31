@@ -2888,6 +2888,26 @@ PrefabInstance:
       propertyPath: Stone
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: StoneRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: AwardBulletRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: AwardShieldRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: LaserRate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4953210505930327365, guid: 77a8edf698afd024fb3a7f0984e85095,
         type: 3}
       propertyPath: m_Name
