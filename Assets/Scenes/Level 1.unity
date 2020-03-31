@@ -277,32 +277,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
---- !u!114 &97124405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97124402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconG: {fileID: 0}
-  cooldownTime: 16
-  cooldownTimeG: 0
-  cooldownTimeH: 8
-  cooldownTimeJ: 0
-  cooldownTimeK: 0
-  move: {fileID: 1030448384}
-  shield: {fileID: 0}
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
-=======
->>>>>>> BorenJiang
 --- !u!114 &97124406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,10 +1452,7 @@ GameObject:
   - component: {fileID: 662538382}
   - component: {fileID: 662538381}
   - component: {fileID: 662538379}
-<<<<<<< HEAD
-=======
   - component: {fileID: 662538383}
->>>>>>> BorenJiang
   m_Layer: 5
   m_Name: SkilK
   m_TagString: Untagged
@@ -1553,32 +1524,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
---- !u!114 &662538380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662538377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconG: {fileID: 0}
-  cooldownTime: 8
-  cooldownTimeG: 0
-  cooldownTimeH: 0
-  cooldownTimeJ: 0
-  cooldownTimeK: 4
-  move: {fileID: 1030448384}
-  shield: {fileID: 0}
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
-=======
->>>>>>> BorenJiang
 --- !u!114 &662538381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,8 +1560,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662538377}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
-=======
 --- !u!114 &662538383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1634,7 +1577,6 @@ MonoBehaviour:
   gun3: {fileID: 1552328325}
   skillStopTime: 5
   cooldownTimeK: 10
->>>>>>> BorenJiang
 --- !u!1 &688715496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,15 +2380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26e60855263ce54683d7a6243857ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  iconG: {fileID: 1912162081}
-  cooldownTime: 10
-  cooldownTimeG: 5
-  cooldownTimeH: 0
-  cooldownTimeJ: 0
-  cooldownTimeK: 0
-=======
->>>>>>> BorenJiang
   move: {fileID: 1030448384}
   skillStopTime: 4
   cooldownTimeG: 8
@@ -2954,6 +2887,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Stone
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: StoneRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: AwardBulletRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: AwardShieldRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953210505930327364, guid: 77a8edf698afd024fb3a7f0984e85095,
+        type: 3}
+      propertyPath: LaserRate
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4953210505930327365, guid: 77a8edf698afd024fb3a7f0984e85095,
         type: 3}
@@ -3937,32 +3890,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
---- !u!114 &2114578868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114578865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2cf7d755c007c4d9de2d35a130dc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iconG: {fileID: 0}
-  cooldownTime: 4
-  cooldownTimeG: 0
-  cooldownTimeH: 0
-  cooldownTimeJ: 0
-  cooldownTimeK: 4
-  move: {fileID: 1030448384}
-  shield: {fileID: 0}
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
-=======
->>>>>>> BorenJiang
 --- !u!114 &2114578869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4146,12 +4073,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    m_RemovedComponents: []
-=======
     m_RemovedComponents:
     - {fileID: 3747634162358465085, guid: 7e35f5f3636af45469dacb3a8410082d, type: 3}
->>>>>>> BorenJiang
   m_SourcePrefab: {fileID: 100100000, guid: 7e35f5f3636af45469dacb3a8410082d, type: 3}
 --- !u!1001 &8262191596204734138
 PrefabInstance:
