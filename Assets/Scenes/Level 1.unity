@@ -291,7 +291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconG: {fileID: 0}
-  iconK: {fileID: 0}
   cooldownTime: 16
   cooldownTimeG: 0
   cooldownTimeH: 8
@@ -1478,8 +1477,6 @@ GameObject:
   - component: {fileID: 662538381}
   - component: {fileID: 662538380}
   - component: {fileID: 662538379}
-  - component: {fileID: 662538383}
-  - component: {fileID: 662538384}
   m_Layer: 5
   m_Name: SkilK
   m_TagString: Untagged
@@ -1564,7 +1561,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconG: {fileID: 0}
-  iconK: {fileID: 1222215150}
   cooldownTime: 8
   cooldownTimeG: 0
   cooldownTimeH: 0
@@ -1611,35 +1607,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662538377}
   m_CullTransparentMesh: 0
---- !u!114 &662538383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662538377}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d5cae37006d1014eb81e2bee0ad325b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 8
---- !u!114 &662538384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662538377}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb5af1659ba69f41abadd8bc37ad0df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
-  cooldownTimeK: 4
 --- !u!1 &688715496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,7 +2411,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconG: {fileID: 1912162081}
-  iconK: {fileID: 0}
   cooldownTime: 10
   cooldownTimeG: 5
   cooldownTimeH: 0
@@ -3956,7 +3922,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconG: {fileID: 0}
-  iconK: {fileID: 0}
   cooldownTime: 4
   cooldownTimeG: 0
   cooldownTimeH: 0
@@ -4143,6 +4108,11 @@ PrefabInstance:
     - target: {fileID: 3747634162358465085, guid: 7e35f5f3636af45469dacb3a8410082d,
         type: 3}
       propertyPath: cooldownTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747634162358465085, guid: 7e35f5f3636af45469dacb3a8410082d,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

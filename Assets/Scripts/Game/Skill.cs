@@ -8,7 +8,7 @@ public class Skill : MonoBehaviour
     public Image iconG;
     private Image iconH;
     private Image iconJ;
-    public Image iconK;
+    private Image iconK;
 
     public float cooldownTime;
     public float cooldownTimeG;
@@ -54,6 +54,7 @@ public class Skill : MonoBehaviour
         //icon = transform.Find("Mask").GetComponent<Image>();
 
         gun1.OnFire();
+        iconK = transform.Find("MaskK").GetComponent<Image>();
         //gun2.stopFire();
         //gun3.stopFire();
         //shield.SetActive(false);
@@ -87,23 +88,23 @@ public class Skill : MonoBehaviour
         if (isStartTimerG == true)
         {
             timerG += Time.deltaTime;
-            iconG.fillAmount = (cooldownTime - timerG) / cooldownTime;
-            if (timerG >= cooldownTimeG)
+            iconG.fillAmount = (cooldownTime - timerG) / cooldownTime;         
+        }
+        if (timerG >= cooldownTimeG)
+        {
+            if (isGSkill == true)
             {
-                if (isGSkill == true)
-                {                   
-                    move.speed = 4;
-                    isGSkill = false;
-                }
+                move.speed = 4;
+                isGSkill = false;
             }
-            if (timerG >= cooldownTime)
-            {
-                iconG.fillAmount = 0;
-                timerG = 0;
-                isGLock = false;
-                isStartTimerG = false;
-                //isGSkill = false;
-            }
+        }
+        if (timerG >= cooldownTime)
+        {
+            iconG.fillAmount = 0;
+            timerG = 0;
+            isGLock = false;
+            isStartTimerG = false;
+            //isGSkill = false;
         }
     }
 
@@ -124,25 +125,25 @@ public class Skill : MonoBehaviour
         if (isStartTimerK == true)
         {
             timerK += Time.deltaTime;
-            iconK.fillAmount = (cooldownTime - timerK) / cooldownTime;
-            if (timerK >= cooldownTimeK)
+            iconK.fillAmount = (cooldownTime - timerK) / cooldownTime;            
+        }
+        if (timerK >= cooldownTimeK)
+        {
+            if (isKSkill == true)
             {
-                if (isKSkill == true)
-                {
-                    isKSkill = false;
-                    gun1.OnFire();
-                    gun2.stopFire();
-                    gun3.stopFire();
-                }
+                isKSkill = false;
+                gun1.OnFire();
+                gun2.stopFire();
+                gun3.stopFire();
             }
-            if (timerK >= cooldownTime)
-            {
-                iconK.fillAmount = 0;
-                timerK = 0;
-                isKLock = false;
-                isStartTimerK = false;
-                //isKSkill = false;
-            }
+        }
+        if (timerK >= cooldownTime)
+        {
+            iconK.fillAmount = 0;
+            timerK = 0;
+            isKLock = false;
+            isStartTimerK = false;
+            //isKSkill = false;
         }
     }
 
