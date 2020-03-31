@@ -27,7 +27,7 @@ public class G : MonoBehaviour
         {
             isGLock = true;
             isGSkill = true;
-            move.speed = 10;
+            move.speed = move.speed * 2;
             isStartTimerG = true;
         }
 
@@ -40,7 +40,7 @@ public class G : MonoBehaviour
         {
             if (isGSkill == true)
             {
-                move.speed = 4;
+                move.speed = move.speed / 2;
                 isGSkill = false;
             }
         }
