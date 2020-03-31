@@ -292,10 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconG: {fileID: 0}
   iconK: {fileID: 0}
-  cooldownTime: 16
-  cooldownTimeG: 0
-  cooldownTimeH: 8
-  cooldownTimeJ: 0
+  skillStopTime: 0
+  cooldownTimeG: 10
   cooldownTimeK: 0
   move: {fileID: 1030448384}
   shield: {fileID: 0}
@@ -1565,11 +1563,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconG: {fileID: 0}
   iconK: {fileID: 1222215150}
-  cooldownTime: 8
+  skillStopTime: 4
   cooldownTimeG: 0
-  cooldownTimeH: 0
-  cooldownTimeJ: 0
-  cooldownTimeK: 4
+  cooldownTimeK: 8
   move: {fileID: 1030448384}
   shield: {fileID: 0}
   gun1: {fileID: 790419391}
@@ -1623,7 +1619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5cae37006d1014eb81e2bee0ad325b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 8
 --- !u!114 &662538384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1636,10 +1631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb5af1659ba69f41abadd8bc37ad0df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun1: {fileID: 790419391}
-  gun2: {fileID: 1414392539}
-  gun3: {fileID: 1552328325}
-  cooldownTimeK: 4
 --- !u!1 &688715496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,10 +2436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconG: {fileID: 1912162081}
   iconK: {fileID: 0}
-  cooldownTime: 10
-  cooldownTimeG: 5
-  cooldownTimeH: 0
-  cooldownTimeJ: 0
+  skillStopTime: 5
+  cooldownTimeG: 10
   cooldownTimeK: 0
   move: {fileID: 1030448384}
   shield: {fileID: 0}
@@ -3957,10 +3946,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconG: {fileID: 0}
   iconK: {fileID: 0}
-  cooldownTime: 4
-  cooldownTimeG: 0
-  cooldownTimeH: 0
-  cooldownTimeJ: 0
+  skillStopTime: 0
+  cooldownTimeG: 10
   cooldownTimeK: 4
   move: {fileID: 1030448384}
   shield: {fileID: 0}
@@ -4233,7 +4220,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 851717119}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_ActionId
@@ -4268,7 +4255,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 851717119}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -4323,7 +4310,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 662538380}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -4448,7 +4435,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 662538380}
+      objectReference: {fileID: 0}
     - target: {fileID: 8262191595879321698, guid: 2b432543e2eb0424fb262e7d8579e9f8,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
