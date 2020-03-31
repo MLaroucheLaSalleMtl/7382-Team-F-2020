@@ -17,6 +17,8 @@ public class PlayerMove : MonoBehaviour
     public GameObject deadpanel;   
     private GameManager manager;
 
+    public GameObject skill;
+
     public void OnMove(InputAction.CallbackContext context)//移动控制
     {
         move = context.ReadValue<Vector2>();        
@@ -51,6 +53,7 @@ public class PlayerMove : MonoBehaviour
             Destroy(this.gameObject);
             Time.timeScale = 0f;
             deadpanel.SetActive(true);
+            skill.SetActive(false);
         }
     }   
 }

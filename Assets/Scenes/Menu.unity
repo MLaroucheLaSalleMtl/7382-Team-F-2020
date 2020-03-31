@@ -1148,8 +1148,8 @@ MonoBehaviour:
   - {fileID: 1148223267}
   defaultButtons:
   - {fileID: 1564174638}
-  - {fileID: 1294935704}
-  - {fileID: 995102523}
+  - {fileID: 1222985006}
+  - {fileID: 2113200087}
 --- !u!1001 &915925661
 PrefabInstance:
   m_ObjectHideFlags: 0

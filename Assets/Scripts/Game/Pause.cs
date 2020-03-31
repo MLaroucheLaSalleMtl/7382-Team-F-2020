@@ -7,8 +7,10 @@ public class Pause : MonoBehaviour
 {
 	public GameObject pause;
 	//public GameObject dis;
-	public bool isPaused = false;
-	public GameObject GameStartPanel;
+	//public bool isPaused = false;
+	//public GameObject GameStartPanel;
+
+	public GameObject skill;
 
 	// Start is called before the first frame update
 	void Start()
@@ -19,26 +21,12 @@ public class Pause : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetButton("Cancel"))
 		{
-			//dis.SetActive(false);
-			//Cursor.lockState = CursorLockMode.Confined;
-			//Cursor.visible = true;
-			if (isPaused)
-			{
-				ResumeGame();
-			}
-			else
-			{
-				pause.SetActive(true);
-				Time.timeScale = 0f;
-				isPaused = true;
-				//if (Input.GetMouseButtonDown(0))
-				//{
-				//	GameObject.FindGameObjectWithTag("BackToMenu");
-				//	ResumeGame();
-				//}
-			}
+			pause.SetActive(true);
+			Time.timeScale = 0f;
+			//isPaused = true;
+			skill.SetActive(false);
 		}
 	}
 
@@ -47,22 +35,23 @@ public class Pause : MonoBehaviour
 		//dis.SetActive(true);
 		pause.SetActive(false);
 		Time.timeScale = 1f;
-		isPaused = false;
+		//isPaused = false;
+		skill.SetActive(true);
 	}
 
-	public void Mainmenu()
-	{
-		Cursor.lockState = CursorLockMode.Confined;
-		Cursor.visible = true;
-		SceneManager.LoadScene("GameScene");
-	}
+	//public void Mainmenu()
+	//{
+	//	Cursor.lockState = CursorLockMode.Confined;
+	//	Cursor.visible = true;
+	//	SceneManager.LoadScene("GameScene");
+	//}
 
-	public void StartGame()
-	{
-		//Cursor.lockState = CursorLockMode.Confined;
-		//Cursor.visible = true;
-		Time.timeScale = 0f;
-		GameStartPanel.SetActive(false);
-		ResumeGame();
-	}
+	//public void StartGame()
+	//{
+	//	//Cursor.lockState = CursorLockMode.Confined;
+	//	//Cursor.visible = true;
+	//	Time.timeScale = 0f;
+	//	GameStartPanel.SetActive(false);
+	//	ResumeGame();
+	//}
 }
