@@ -9,13 +9,16 @@ public class Gun : MonoBehaviour
     public GameObject bullet;
     private GameObject skill3;
     public Image forskill;
+    public AudioSource audio;
 
     private void Start()
     {
         skill3 = GameObject.FindGameObjectWithTag("Player");
+        
     }
     public void Fire()
     {
+        audio.Play();
             GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
     }
     public void OnFire()

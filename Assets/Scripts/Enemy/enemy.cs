@@ -42,7 +42,7 @@ public class enemy : MonoBehaviour
         else if(gameObject.tag=="Boss")
         {
             float step = speed * Time.deltaTime;
-            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(2, 7, -5), step);
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(0, 5, -14), step);
         }
         
         if(this.transform.position.y<-5.6f)//当敌人超过-5.6时摧毁
@@ -74,6 +74,12 @@ public class enemy : MonoBehaviour
                 GameObject.Destroy(this.gameObject);//撞到玩家后飞机消失 
             }
 
+        }
+
+        if (collision.tag == "Shield")
+        {
+            collision.gameObject.SendMessage("ShieldBeHit");
+            GameObject.Destroy(this.gameObject);
         }
     }
 }

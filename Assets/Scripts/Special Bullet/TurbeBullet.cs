@@ -22,7 +22,7 @@ public class TurbeBullet : MonoBehaviour
         {
             for (int j = 0; j < 36; j++)
             {
-                CreatBullet(bulletDir, creatPoint);
+                CreatBullet(bulletDir, firPoint.transform.position);
                 bulletDir = rotateQuate * bulletDir; //让发射方向旋转10度，到达下一个发射方向
             }
             yield return new WaitForSeconds(0.5f); //协程延时，0.5秒进行下一波发射
@@ -38,7 +38,7 @@ public class TurbeBullet : MonoBehaviour
         for (int i = 0; i < 18; i++)
         {
             Vector3 firePoint = firPoint.transform.position + bulletDir * radius;   //使用向量计算生成位置
-            StartCoroutine(FirRound(1, firePoint));     //在算好的位置生成一波圆形弹幕
+            StartCoroutine(FirRound(1, firPoint.transform.position));     //在算好的位置生成一波圆形弹幕
             yield return new WaitForSeconds(0.05f);      //延时较小的时间（为了表现效果），计算下一步
             bulletDir = rotateQuate * bulletDir;        //发射方向改变
             radius += distance;     //生成半径增加

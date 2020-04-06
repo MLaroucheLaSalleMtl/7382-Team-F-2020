@@ -6,7 +6,7 @@ public class FireSPCBullet : MonoBehaviour
 {
     public GameObject specialBullet;
 
-    [SerializeField] private float bulletRate;
+    [SerializeField] private float bulletRate=5;
     [SerializeField] private float speed = 2;
 
     public void CreateBoomb()
@@ -15,7 +15,7 @@ public class FireSPCBullet : MonoBehaviour
         if (this.gameObject.tag == "SPCBullet")
         {
             float step = speed * Time.deltaTime;
-            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(0, -6, 0), step);
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(0, -5, 0), step);
         }
     }
 

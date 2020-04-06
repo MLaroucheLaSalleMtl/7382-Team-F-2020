@@ -29,7 +29,7 @@ public class RoundGroupBullet : MonoBehaviour
         {
             for (int j = 0; j < 36; j++)
             {
-                CreatBullet(bulletDir, creatPoint);
+                CreatBullet(bulletDir, firPoint.transform.position);
                 bulletDir = rotateQuate * bulletDir; //让发射方向旋转10度，到达下一个发射方向
             }
             yield return new WaitForSeconds(0.5f); //协程延时，0.5秒进行下一波发射

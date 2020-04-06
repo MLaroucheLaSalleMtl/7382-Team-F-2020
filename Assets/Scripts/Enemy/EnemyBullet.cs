@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    public bool isPlayer = false ;
+    public bool isPlayer = false;
     [Range(6f, 10f)] [SerializeField] private float speed = 7f;
     // Start is called before the first frame update
     void Start()
@@ -16,17 +16,25 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        if (gameObject.tag == "EnemyBullet")
+        {
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
+        }
+        if (gameObject.tag == "SPCBullet")
+        {
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             collision.gameObject.SendMessage("BeHit");
             GameObject.Destroy(this.gameObject);//撞到玩家后子弹消失 
         }
-        if(collision.tag=="Shield")
+        if (collision.tag == "Shield")
         {
             collision.gameObject.SendMessage("ShieldBeHit");
             GameObject.Destroy(this.gameObject);
