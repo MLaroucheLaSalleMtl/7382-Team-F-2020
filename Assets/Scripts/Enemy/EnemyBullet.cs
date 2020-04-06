@@ -36,7 +36,7 @@ public class EnemyBullet : MonoBehaviour
         }
         if (collision.tag == "Shield")
         {
-            collision.gameObject.SendMessage("ShieldBeHit");
+            //collision.gameObject.SendMessage("ShieldBeHit");
             GameObject.Destroy(this.gameObject);
         }
     }
