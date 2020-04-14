@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour
     public GameObject bullet;
     private GameObject skill3;
     public Image forskill;
-    public AudioSource audio;
+    [SerializeField] private AudioSource audio;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
     public void Fire()
     {
         audio.Play();
-            GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
+        GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
     }
     public void OnFire()
     {

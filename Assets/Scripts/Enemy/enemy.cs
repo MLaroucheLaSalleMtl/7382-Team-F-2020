@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyType
-{
-    enemyBasic,
-    Boss
-}
 
 
 public class enemy : MonoBehaviour
@@ -14,7 +9,6 @@ public class enemy : MonoBehaviour
     [SerializeField] private int hp = 1;
     [SerializeField] private float speed = 3;
     [SerializeField] private int goldscore=100;
-    [SerializeField] private EnemyType type = EnemyType.enemyBasic;
     [SerializeField] public bool IsDeath = false;
     [SerializeField] private GameObject EnemyGun;
 
@@ -42,10 +36,20 @@ public class enemy : MonoBehaviour
         else if(gameObject.tag=="Boss")
         {
             float step = speed * Time.deltaTime;
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(2, 7, -5), step);
+        }
+        else if (gameObject.tag == "Boss2")
+        {
+            float step = speed * Time.deltaTime;
             gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(0, 5, -14), step);
         }
-        
-        if(this.transform.position.y<-5.6f)//当敌人超过-5.6时摧毁
+        else if (gameObject.tag == "Boss3")
+        {
+            float step = speed * Time.deltaTime;
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(2, 7, -5), step);
+        }
+
+        if (this.transform.position.y<-5.6f)//当敌人超过-5.6时摧毁
         {
             Destroy(this.gameObject);
         }
@@ -57,10 +61,33 @@ public class enemy : MonoBehaviour
         hp -= 1;
             if(hp<=0)
             {
+            if(this.gameObject.tag=="Enemy"||this.gameObject.tag=="EnemyLeft"||this.gameObject.tag=="EnemyRight")
+            {
+                IsDeath = true;
+                Destroy(this.gameObject);
+                GameManager.instance.score += goldscore;
+
+            }
+            if(this.gameObject.tag=="Boss")
+            {
                 IsDeath = true;
                 Destroy(this.gameObject);
                 GameManager.instance.score += goldscore;
             }
+            if (this.gameObject.tag == "Boss2")
+            {
+                IsDeath = true;
+                Destroy(this.gameObject);
+                GameManager.instance.score += goldscore;
+            }
+            if (this.gameObject.tag == "Boss3")
+            {
+                IsDeath = true;
+                Destroy(this.gameObject);
+                GameManager.instance.score += goldscore;
+            }
+
+        }
             
         
     }
