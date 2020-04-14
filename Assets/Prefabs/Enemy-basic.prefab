@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 10a9675a6e4b7db4cb4acdc2a41f3111, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7487693, g: 0.8207547, b: 0.41424885, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,7 +129,6 @@ MonoBehaviour:
   hp: 1
   speed: 6
   goldscore: 100
-  type: 0
   IsDeath: 0
   EnemyGun: {fileID: 0}
 --- !u!60 &2347300200372633857

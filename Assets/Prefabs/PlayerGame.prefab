@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   smooting: 0.072
-  hp: 10
+  hp: 20
   IsDeath: 0
   deadpanel: {fileID: 0}
   skill: {fileID: 0}
