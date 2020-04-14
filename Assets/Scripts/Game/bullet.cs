@@ -24,7 +24,7 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Enemy"||collision.tag=="EnemyLeft"||collision.tag=="EnemyRight"||collision.tag=="Boss")
+        if(collision.tag=="Enemy"||collision.tag=="EnemyLeft"||collision.tag=="EnemyRight"||collision.tag=="Boss" || collision.tag == "Boss2" || collision.tag == "Boss3")
         {
             if (!collision.GetComponent<enemy>().IsDeath)
             {

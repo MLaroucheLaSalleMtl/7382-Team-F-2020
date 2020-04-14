@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class K : MonoBehaviour
+public class SkillK : MonoBehaviour
 {
     public Gun gun1;
     public Gun gun2;

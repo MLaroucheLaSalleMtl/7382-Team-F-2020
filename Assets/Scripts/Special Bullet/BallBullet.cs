@@ -7,10 +7,14 @@ public class BallBullet : MonoBehaviour
     public BulletCharacter bulletTemplate;
     public Transform firPoint;
     public List<BulletCharacter> tempBullets;
+    public float CountTime;
+    public float StopTime;
     // Start is called before the first frame update
     void Start()
     {
         tempBullets = new List<BulletCharacter>();
+        CountTime *= Time.deltaTime;
+        StopTime += Time.deltaTime;
         StartCoroutine(FireBallBulle());
     }
 
@@ -18,21 +22,26 @@ public class BallBullet : MonoBehaviour
     {
         Vector3 bulletDir = firPoint.transform.up;      //发射方向
         Quaternion rotateQuate = Quaternion.AngleAxis(10, Vector3.forward);//使用四元数制造绕Z轴旋转20度的旋转
-        float distance = 1.0f;
-        for (int j = 0; j < 8; j++)
+        while( CountTime<StopTime)
         {
-            for (int i = 0; i < 36; i++)
+            yield return new WaitForSeconds(23f);
+            float distance = 1.0f;
+            for (int j = 0; j < 8; j++)
             {
-                Vector3 creatPoint = firPoint.transform.position + bulletDir * distance;
-                BulletCharacter tempBullet = CreatBullet(bulletDir, creatPoint);
-                tempBullet.isMove = false;
-                StartCoroutine(tempBullet.DirChangeMoveMode(10.0f, 0.4f, 15));
-                bulletDir = rotateQuate * bulletDir;
+                for (int i = 0; i < 36; i++)
+                {
+                    Vector3 creatPoint = firPoint.transform.position + bulletDir * distance;
+                    BulletCharacter tempBullet = CreatBullet(bulletDir, creatPoint);
+                    tempBullet.isMove = false;
+                    StartCoroutine(tempBullet.DirChangeMoveMode(10.0f, 0.4f, 15));
+                    bulletDir = rotateQuate * bulletDir;
+                }
+                yield return new WaitForSeconds(0.2f);
             }
-            yield return new WaitForSeconds(0.2f);
-        }
 
-        yield return null;
+            yield return null;
+        }
+        
     }
     public BulletCharacter CreatBullet(Vector3 dir, Vector3 creatPoint)
     {

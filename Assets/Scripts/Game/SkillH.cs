@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class H : MonoBehaviour
+public class SkillH : MonoBehaviour
 {
     private Image iconH;
     private bool isHSkill;
     private bool isHLock;
-    public GameObject shield;
+    public PlayerMove move;
     private bool isStartTimerH;
     private float timerH;
     public float skillStopTime;
@@ -27,20 +27,20 @@ public class H : MonoBehaviour
         {
             isHLock = true;
             isHSkill = true;
-            shield.SetActive(true);
+            move.speed = move.speed * 2;
             isStartTimerH = true;
         }
 
         if (isStartTimerH == true)
         {
             timerH += Time.deltaTime;
-            iconH.fillAmount = (cooldownTimeH - timerH) / cooldownTimeH;
+            iconH.fillAmount = (cooldownTimeH - timerH) / cooldownTimeH;            
         }
         if (timerH >= skillStopTime)
         {
             if (isHSkill == true)
             {
-                shield.SetActive(false);
+                move.speed = move.speed / 2;
                 isHSkill = false;
             }
         }
