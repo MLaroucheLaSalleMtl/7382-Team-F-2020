@@ -1038,7 +1038,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gun1
       value: 
-      objectReference: {fileID: 821214251}
+      objectReference: {fileID: 2076274754}
     - target: {fileID: 1871097708946065634, guid: 783dc3ddb20c6604b990f81e959fcdb8,
         type: 3}
       propertyPath: gun2
@@ -1896,18 +1896,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792355478}
   m_CullTransparentMesh: 0
---- !u!114 &821214251 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8240838900284829260, guid: 7e35f5f3636af45469dacb3a8410082d,
-    type: 3}
-  m_PrefabInstance: {fileID: 8240838899798014451}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5197d435ee737419736438d69bf1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &853004965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2654,6 +2642,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876498138}
   m_CullTransparentMesh: 0
+--- !u!114 &2076274754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6687083249102514006, guid: 7e35f5f3636af45469dacb3a8410082d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8240838899798014451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5197d435ee737419736438d69bf1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8240838899798014451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2776,11 +2776,6 @@ PrefabInstance:
       propertyPath: deadpanel
       value: 
       objectReference: {fileID: 692181961}
-    - target: {fileID: 8240838900520918259, guid: 7e35f5f3636af45469dacb3a8410082d,
-        type: 3}
-      propertyPath: skill
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e35f5f3636af45469dacb3a8410082d, type: 3}
 --- !u!1001 &8262191596204734138
