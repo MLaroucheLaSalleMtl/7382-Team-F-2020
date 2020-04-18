@@ -13,14 +13,18 @@ public class SkillK : MonoBehaviour
     private bool isKLock;
     private bool isStartTimerK;
     private float timerK;
-    public float skillStopTime;
+    public float skillKStopTime;
     public float cooldownTimeK;
+
+    public GameObject skillKDuration;
+    public Image durationKImage;
 
     // Start is called before the first frame update
     void Start()
     {
         gun1.OnFire();
         iconK = transform.Find("MaskK").GetComponent<Image>();
+        skillKDuration.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,16 +38,19 @@ public class SkillK : MonoBehaviour
             gun2.OnFire();
             gun3.OnFire();
             isStartTimerK = true;
+            skillKDuration.SetActive(true);
         }
         if (isStartTimerK == true)
         {
             timerK += Time.deltaTime;
+            durationKImage.fillAmount = (skillKStopTime - timerK) / skillKStopTime;
             iconK.fillAmount = (cooldownTimeK - timerK) / cooldownTimeK;            
         }
-        if (timerK >= skillStopTime)
+        if (timerK >= skillKStopTime)
         {
             if (isKSkill == true)
             {
+                skillKDuration.SetActive(false);
                 isKSkill = false;
                 gun1.OnFire();
                 gun2.stopFire();
