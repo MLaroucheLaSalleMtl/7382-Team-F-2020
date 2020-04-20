@@ -30,13 +30,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreText.text = preTextScore + score.ToString("D8");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //scoreText.text = preTextScore + score.ToString("D8");
+        scoreText.text = preTextScore + score.ToString("D8");
     }
 
     public void Death()

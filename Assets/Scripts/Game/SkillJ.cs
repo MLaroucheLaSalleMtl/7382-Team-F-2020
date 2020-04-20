@@ -11,13 +11,17 @@ public class SkillJ : MonoBehaviour
     public GameObject shield;
     private bool isStartTimerJ;
     private float timerJ;
-    public float skillStopTime;
+    public float skillJStopTime;
     public float cooldownTimeJ;
+
+    public GameObject skillJDuration;
+    public Image durationJImage;
 
     // Start is called before the first frame update
     void Start()
     {
         iconJ = transform.Find("MaskJ").GetComponent<Image>();
+        skillJDuration.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,19 +33,22 @@ public class SkillJ : MonoBehaviour
             isJSkill = true;
             shield.SetActive(true);
             isStartTimerJ = true;
+            skillJDuration.SetActive(true);
         }
 
         if (isStartTimerJ == true)
         {
             timerJ += Time.deltaTime;
+            durationJImage.fillAmount = (skillJStopTime - timerJ) / skillJStopTime;
             iconJ.fillAmount = (cooldownTimeJ - timerJ) / cooldownTimeJ;
         }
-        if (timerJ >= skillStopTime)
+        if (timerJ >= skillJStopTime)
         {
             if (isJSkill == true)
             {
                 shield.SetActive(false);
                 isJSkill = false;
+                skillJDuration.SetActive(false);
             }
         }
         if (timerJ >= cooldownTimeJ)

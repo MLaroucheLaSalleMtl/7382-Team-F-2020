@@ -14,6 +14,7 @@ public class LeaderBoard : MonoBehaviour
     private void Awake()
     {
         manage = GameManager.instance;
+        //manage.score = container; //用 Gamemanager里的数值去代替container里的数值
         container = transform.Find("HighScoreContainer");
         template = container.Find("HighScoreTemplate");
 
