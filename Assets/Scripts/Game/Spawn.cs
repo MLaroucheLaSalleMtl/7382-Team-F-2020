@@ -24,7 +24,16 @@ public class Spawn : MonoBehaviour
     [SerializeField] private float LaserRate = 10f;
     private float seconds, minutes;
 
-    
+    public GameObject hpUp;
+    [SerializeField] private float hpUpRate;
+    public GameObject speedUp;
+    [SerializeField] private float speedUpRate;
+    public GameObject speedDown;
+    [SerializeField] private float speedDownRate;
+    public GameObject bulletUp;
+    [SerializeField] private float bulletUpRate;
+    public GameObject bulletDown;
+    [SerializeField] private float bulletDownRate;
 
     public void CreateEnemyBasic()
     {
@@ -61,8 +70,33 @@ public class Spawn : MonoBehaviour
         {
             CancelInvoke("CreateEnemyBasic");
             CancelInvoke("CreateEnemyBasic2");
-
         }
+    }
+
+    public void CreateHpUp()
+    {
+        float x = Random.Range(-6.16f, 6.15f);
+        GameObject.Instantiate(hpUp, new Vector3(x, transform.position.y, 0), Quaternion.identity);
+    }
+    public void CreateSpeedUp()
+    {
+        float x = Random.Range(-6.16f, 6.15f);
+        GameObject.Instantiate(speedUp, new Vector3(x, transform.position.y, 0), Quaternion.identity);
+    }
+    public void CreateSpeedDown()
+    {
+        float x = Random.Range(-6.16f, 6.15f);
+        GameObject.Instantiate(speedDown, new Vector3(x, transform.position.y, 0), Quaternion.identity);
+    }
+    public void CreateBulletUp()
+    {
+        float x = Random.Range(-6.16f, 6.15f);
+        GameObject.Instantiate(bulletUp, new Vector3(x, transform.position.y, 0), Quaternion.identity);
+    }
+    public void CreateBullletDown()
+    {
+        float x = Random.Range(-6.16f, 6.15f);
+        GameObject.Instantiate(bulletDown, new Vector3(x, transform.position.y, 0), Quaternion.identity);
     }
 
     public void CreateLaser()
@@ -78,13 +112,19 @@ public class Spawn : MonoBehaviour
         
         InvokeRepeating("CreateEnemyBasic", 1, enemyBasicRate);
         InvokeRepeating("CreateEnemyBasic2", 6, enemyBasicRate2);
+        InvokeRepeating("CreateHpUp", 1, hpUpRate);
+        InvokeRepeating("CreateSpeedUp", 1, speedUpRate);
+        InvokeRepeating("CreateSpeedDown", 5, speedDownRate);
+        InvokeRepeating("CreateBulletUp", 3, bulletUpRate);
+        InvokeRepeating("CreateBullletDown", 6, bulletDownRate);
         InvokeRepeating("CreateStone", 20, StoneRate);
         InvokeRepeating("CreateAward1", 30, AwardBulletRate);
         InvokeRepeating("CreateAwardShield", 30, AwardShieldRate);
         InvokeRepeating("CreateLaser", 30, LaserRate);
         InvokeRepeating("IncreaseEnemyRate", 10, 10);
         Invoke("CreateBoss", 90);
-       
+
+        
 
     }
     void IncreaseEnemyRate()

@@ -25,6 +25,11 @@ public class EnemyBullet : MonoBehaviour
 
         }
 
+        if (this.transform.position.y < -5.6f)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

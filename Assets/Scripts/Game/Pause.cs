@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
 	public GameObject pause;
-	//public GameObject dis;
+	public GameObject hpPanel;
 	//public bool isPaused = false;
 	//public GameObject GameStartPanel;
 
@@ -27,6 +27,7 @@ public class Pause : MonoBehaviour
 			Time.timeScale = 0f;
 			//isPaused = true;
 			skill.SetActive(false);
+			hpPanel.SetActive(false);
 		}
 	}
 
@@ -37,6 +38,7 @@ public class Pause : MonoBehaviour
 		Time.timeScale = 1f;
 		//isPaused = false;
 		skill.SetActive(true);
+		hpPanel.SetActive(true);
 	}
 
 	//public void Mainmenu()

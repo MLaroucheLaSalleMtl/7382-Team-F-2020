@@ -163,7 +163,6 @@ MonoBehaviour:
   hp: 100
   speed: 1.5
   goldscore: 300
-  type: 1
   IsDeath: 0
   EnemyGun: {fileID: 0}
 --- !u!61 &7756043966258851375

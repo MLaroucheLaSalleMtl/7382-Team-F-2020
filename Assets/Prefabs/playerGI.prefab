@@ -208,8 +208,12 @@ MonoBehaviour:
   smooting: 0.072
   hp: 10
   IsDeath: 0
+  healthBar: {fileID: 2651758248612994693, guid: aad9fa0ba0c09e140a918844910d26ea,
+    type: 3}
+  currentHP: 0
   deadpanel: {fileID: 0}
   skill: {fileID: 0}
+  slider: {fileID: 77493801324152821, guid: aad9fa0ba0c09e140a918844910d26ea, type: 3}
 --- !u!222 &7452478040309382286
 CanvasRenderer:
   m_ObjectHideFlags: 0

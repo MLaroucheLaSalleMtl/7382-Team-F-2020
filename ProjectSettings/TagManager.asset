@@ -17,6 +17,12 @@ TagManager:
   - EnemyBullet
   - Boss2
   - Boss3
+  - Hp+
+  - Speed+
+  - Speed-
+  - Bullet+
+  - Bullet-
+  - PowerUp
   layers:
   - Default
   - TransparentFX
