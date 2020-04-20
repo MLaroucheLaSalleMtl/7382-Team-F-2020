@@ -109,6 +109,7 @@ public class enemy : MonoBehaviour
                 IsDeath = true;
                 Destroy(this.gameObject);
                 GameManager.instance.score += goldscore;
+                StartCoroutine(WaitAndPlay());
                 SceneManager.LoadScene("EndingFlowchart");
             }
         }
@@ -125,6 +126,11 @@ public class enemy : MonoBehaviour
             ultimate = 30;
         }
         Debug.Log("Uitimate is: " + ultimate);
+    }
+
+    IEnumerator WaitAndPlay()
+    {
+        yield return new WaitForSeconds(500);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

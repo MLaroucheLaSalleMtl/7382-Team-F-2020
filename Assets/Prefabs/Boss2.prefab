@@ -224,11 +224,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67127afe27fd3e54c9d2a8f8e1789ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 300
   speed: 3
   goldscore: 100
   IsDeath: 0
   EnemyGun: {fileID: 0}
+  ultimate: 0
 --- !u!58 &7802743387216799373
 CircleCollider2D:
   m_ObjectHideFlags: 0

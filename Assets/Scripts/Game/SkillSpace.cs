@@ -41,9 +41,11 @@ public class SkillSpace : MonoBehaviour
         if (ene.ultimate != 30)
         {
             iconSpace.fillAmount = (Max - ene.ultimate) / Max;
+            //Debug.Log("Start Count Down" + iconSpace.fillAmount);
         }
         if (ene.ultimate == 30)
         {
+            //Debug.Log("Start Count Down" + iconSpace.fillAmount);
             iconSpace.fillAmount = (Max - ene.ultimate) / Max;
             waitActive = true;
             wingPlane.SetActive(true);
