@@ -17,6 +17,7 @@ public class bullet : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 5f);    //创建子弹后,1.25秒后消除
+        speed = 8f;
     }
 
     // Update is called once per frame
@@ -30,12 +31,11 @@ public class bullet : MonoBehaviour
     {
         if(collision.tag=="Enemy"||collision.tag=="EnemyLeft"||collision.tag=="EnemyRight"||collision.tag=="Boss" || collision.tag == "Boss2" || collision.tag == "Boss3")
         {
-            
             if (!collision.GetComponent<enemy>().IsDeath)
             {
                 collision.gameObject.SendMessage("Hit");
                 GameObject.Destroy(this.gameObject);//撞到飞机后子弹消失 
-            }           
+            }
         }         
     }
 

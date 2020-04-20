@@ -15,7 +15,12 @@ public class TurbeBullet : MonoBehaviour
         tempBullets = new List<BulletCharacter>();
         CountTime *= Time.deltaTime;
         StopTime += Time.deltaTime;
-        StartCoroutine(FireTurbine());
+        while(CountTime < StopTime)
+        {           
+            StartCoroutine(FireTurbine());
+        }
+       
+
     }
 
     IEnumerator FirRound(int number, Vector3 creatPoint)

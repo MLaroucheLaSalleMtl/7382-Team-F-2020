@@ -49,9 +49,16 @@ MonoBehaviour:
   hp: 3
   speed: 2
   goldscore: 200
-  type: 0
   IsDeath: 0
   EnemyGun: {fileID: 1521414688544996950}
+  ultimate: 0
+  enemyForUlti:
+  - {fileID: 4168700454056024262, guid: 98f1bab86602a8448845a652a9adb6a7, type: 3}
+  - {fileID: 1521414688704781733, guid: 090e4f57b96705f46aa0631ee418b976, type: 3}
+  - {fileID: 1521414688704781733, guid: de775fe580bd47e46a858f77b98f91ed, type: 3}
+  - {fileID: 1521414688704781733}
+  - {fileID: 1444195692030540107, guid: 5d4a2c21ab5051d40a20c0dd7c9ac6fe, type: 3}
+  enemies: 0
 --- !u!61 &1521414688704781732
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public class shotGunBullet : MonoBehaviour
         Quaternion RightRota = Quaternion.AngleAxis(30, Vector3.forward); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转30度
       while(CountTime<StopTime)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
             for (int i = 0; i < 10; i++)     //散弹发射次数
             {
                 for (int j = 0; j < 3; j++) //一次发射3颗子弹

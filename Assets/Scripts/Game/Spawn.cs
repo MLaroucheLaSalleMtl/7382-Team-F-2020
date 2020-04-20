@@ -18,7 +18,7 @@ public class Spawn : MonoBehaviour
 
     [SerializeField] private float enemyBasicRate = 0.5f;
     [SerializeField] private float enemyBasicRate2 = 1f;
-    [SerializeField] private float StoneRate = 5f;
+    [SerializeField] private float StoneRate = 2f;
     [SerializeField] private float AwardBulletRate = 10f;
     [SerializeField] private float AwardShieldRate = 10f;
     [SerializeField] private float LaserRate = 10f;
@@ -107,7 +107,6 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyBasicRate1 = GetComponent<GameManager>();
         //enemyBasicRate = GameManager.enemyBasicRate1;
         
         InvokeRepeating("CreateEnemyBasic", 1, enemyBasicRate);
@@ -117,7 +116,7 @@ public class Spawn : MonoBehaviour
         InvokeRepeating("CreateSpeedDown", 5, speedDownRate);
         InvokeRepeating("CreateBulletUp", 3, bulletUpRate);
         InvokeRepeating("CreateBullletDown", 6, bulletDownRate);
-        InvokeRepeating("CreateStone", 20, StoneRate);
+        InvokeRepeating("CreateStone", 15, StoneRate);
         InvokeRepeating("CreateAward1", 30, AwardBulletRate);
         InvokeRepeating("CreateAwardShield", 30, AwardShieldRate);
         InvokeRepeating("CreateLaser", 30, LaserRate);

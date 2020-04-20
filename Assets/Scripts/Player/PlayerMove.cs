@@ -118,7 +118,7 @@ public class PlayerMove : MonoBehaviour
 
         if (other.CompareTag("Bullet+"))
         {
-            //Debug.Log("hit" + other.name);
+            Debug.Log("hit" + other.name);
             if (bullet.speed > 7f)
             {
                 bullet.speed += bullet.speed * (0.2f);

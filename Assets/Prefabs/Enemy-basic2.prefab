@@ -51,6 +51,14 @@ MonoBehaviour:
   goldscore: 200
   IsDeath: 0
   EnemyGun: {fileID: 0}
+  ultimate: 0
+  enemyForUlti:
+  - {fileID: 4168700454056024262, guid: 98f1bab86602a8448845a652a9adb6a7, type: 3}
+  - {fileID: 1521414688704781733, guid: de775fe580bd47e46a858f77b98f91ed, type: 3}
+  - {fileID: 1521414688704781733, guid: de775fe580bd47e46a858f77b98f91ed, type: 3}
+  - {fileID: 1521414688704781733, guid: 4ea71a366a333014c8cffde376596e30, type: 3}
+  - {fileID: 1444195692030540107, guid: 5d4a2c21ab5051d40a20c0dd7c9ac6fe, type: 3}
+  enemies: 0
 --- !u!60 &5550551258280946722
 PolygonCollider2D:
   m_ObjectHideFlags: 0

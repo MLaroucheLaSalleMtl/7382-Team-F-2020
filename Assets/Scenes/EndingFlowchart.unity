@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 141924632}
   - component: {fileID: 141924635}
   - component: {fileID: 141924633}
+  - component: {fileID: 141924621}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -608,6 +609,38 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &141924621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141924609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  storyText: 'This is the last position,{wi}
+
+    but we still can''t find station
+    Alpha.{wi}
+
+    What we are going to do??'
+  description: 
+  character: {fileID: 607484077}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &141924622
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -712,6 +745,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 141924619}
   - {fileID: 141924623}
+  - {fileID: 141924621}
   - {fileID: 141924618}
   - {fileID: 141924629}
   - {fileID: 141924628}
@@ -756,7 +790,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 141924625}
   selectedCommands:
-  - {fileID: 141924618}
+  - {fileID: 141924623}
   variables: []
   description: 
   stepPause: 0
@@ -1323,8 +1357,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524950380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.021, y: -0.002, z: 0}
-  m_LocalScale: {x: 1.742, y: 1.724, z: 1}
+  m_LocalPosition: {x: 0.021, y: 0.018, z: 0}
+  m_LocalScale: {x: 2.3176088, y: 1.7308959, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -1874,8 +1908,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756060705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.034, y: 0.017, z: 0}
-  m_LocalScale: {x: 1.34667, y: 1.3292131, z: 1}
+  m_LocalPosition: {x: 0.014, y: -0.004, z: 0}
+  m_LocalScale: {x: 1.8087932, y: 1.3666863, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
