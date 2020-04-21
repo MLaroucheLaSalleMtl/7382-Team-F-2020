@@ -34,7 +34,9 @@ VII. Sources:
 	Gamepad controller input:  
 		https://www.youtube.com/watch?v=384_g0f7K_I 		  
 	Picture of Xbox 360 Game Controller:   
-		https://modernroboticsinc.com/fusion_docs/Py_usbGamepad/index.html  	  
+		https://modernroboticsinc.com/fusion_docs/Py_usbGamepad/index.html  
+	Skill Cooldown:  
+		https://www.youtube.com/watch?v=8Xgao1qP7xw  
 	Asset Store:  
 		Fungus (be used for story flowchart)  
 		https://assetstore.unity.com/packages/templates/systems/fungus-34184  
