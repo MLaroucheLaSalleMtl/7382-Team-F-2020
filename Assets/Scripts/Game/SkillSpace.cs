@@ -72,7 +72,7 @@ public class SkillSpace : MonoBehaviour
             if (isSpaceSkill == true)
             {
                 skillSpaceDuration.SetActive(false);
-                waitActive = true;
+                //waitActive = true;
                 gun5.stopFire();
                 gun8.stopFire();
 
