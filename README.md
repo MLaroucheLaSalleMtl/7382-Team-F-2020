@@ -40,7 +40,7 @@ VII. Sources:
 		https://assetstore.unity.com/packages/templates/systems/fungus-34184  
 		Tutorial:   
 		https://www.youtube.com/watch?v=F1vmEtQ7k6M&list=PLiMlyObJfJmUohJ_M2pJhtrNKuNECo2Uk  
-		http://fungusdocs.snozbot.com/index.html       			
+		http://fungusdocs.snozbot.com/index.html  
 	Bullet Platform (In Chinese):    
 		https://zhuanlan.zhihu.com/p/51510499  
 		We made a pdf document of this source website in English called Bullet Platform, you can find it in Github.  
