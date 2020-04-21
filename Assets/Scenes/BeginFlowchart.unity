@@ -434,7 +434,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 229021034}
   selectedCommands:
-  - {fileID: 229021022}
+  - {fileID: 229021031}
   variables: []
   description: 
   stepPause: 0
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 36
   indentLevel: 0
-  storyText: 'Now, we have only one position left.{wi}
+  storyText: 'Now, we have only one position left.{wc}
 
     But I have an ominous
     hunch.'
@@ -1226,7 +1226,12 @@ MonoBehaviour:
     positively waiting for us.{wi}
 
     Your need to use your new powerful weapon
-    to beat them.'
+    to beat them.{wc}
+
+    But remember your new powerful wapon only can be changed[wi]
+
+    by
+    your basic weapon.'
   description: 
   character: {fileID: 1612819859}
   portrait: {fileID: 0}
