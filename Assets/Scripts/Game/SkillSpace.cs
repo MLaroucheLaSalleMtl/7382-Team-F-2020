@@ -51,7 +51,7 @@ public class SkillSpace : MonoBehaviour
             wingPlane.SetActive(true);
             ultimateShow.SetActive(true);
         }
-        if (Input.GetButton("SkillSpace") && waitActive == true && isSpaceSkill == false)
+        if (Input.GetButton("SkillSpace") && waitActive == true && isSpaceSkill == false && isStartTimerSpace == false)
         {
             //Debug.Log("111111111111");
             isSpaceSkill = true;
@@ -77,13 +77,15 @@ public class SkillSpace : MonoBehaviour
                 gun8.stopFire();
 
                 StartCoroutine(WaitAndPlay());
-                Debug.Log("111111111111");
+                //Debug.Log("111111111111");
                 ene.ultimate = 0;
                 iconSpace.fillAmount = 1;
                 wingPlane.SetActive(false);
+                Debug.Log("WingPane = false");
                 ultimateShow.SetActive(false);
                 timerSpace = 0;
                 isSpaceSkill = false;
+                isStartTimerSpace = false;
             }
         }
     }

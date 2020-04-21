@@ -3340,6 +3340,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGame
       objectReference: {fileID: 0}
+    - target: {fileID: 8240838898965221590, guid: 7e35f5f3636af45469dacb3a8410082d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8240838898965221595, guid: 7e35f5f3636af45469dacb3a8410082d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8240838900520918259, guid: 7e35f5f3636af45469dacb3a8410082d,
         type: 3}
       propertyPath: deadpanel
