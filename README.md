@@ -14,8 +14,8 @@ In order to save you time, we put all sources below:
 (Also, you can find a documentation in github called Manual.pdf)  
 
 VII. Sources  
-  Keyboard picture:  
-    https://m.duitang.com/blog/?id=824022174&belong_album=86097583  
+	Keyboard picture:  
+    		https://m.duitang.com/blog/?id=824022174&belong_album=86097583  
       
 	Create a Space Shooter Game:  
 		https://www.youtube.com/watch?v=XCOTK-a-1cc  
